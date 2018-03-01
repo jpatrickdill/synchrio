@@ -12,6 +12,9 @@ setup(
     long_description=long_description,
 
     licence="GPLv3",
+    url="https://github.com/reshanie/synchrio/",
+
+    keywords="asyncio async blocking non-blocking",
 
     version=__version__,
     packages=["synchrio"],

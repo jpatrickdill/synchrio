@@ -169,3 +169,5 @@ pip-selfcheck.json
 
 tests/
 test.py
+
+.idea/
