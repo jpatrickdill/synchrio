@@ -18,25 +18,25 @@ wrapper. If you'd like to see a working example, you can test it on aiohttp_ (al
 of Synchrio):
 
 .. code-block:: Python
-    from synchrio import AsyncWrapper
-    import aiohttp as _aiohttp
+   from synchrio import AsyncWrapper
+   import aiohttp as _aiohttp
 
-    aiohttp = AsyncWrapper(_aiohttp)
+   aiohttp = AsyncWrapper(_aiohttp)
 
-    session = aiohttp.ClientSession()
-    with session.get("https://httpbin.org/status/418") as resp:  # normally "async with"
-        print(resp.text())  # normally "await resp.text()"
+   session = aiohttp.ClientSession()
+   with session.get("https://httpbin.org/status/418") as resp:  # normally "async with"
+       print(resp.text())  # normally "await resp.text()"
 
 
-    >>>    -=[ teapot ]=-
-    ...
-    ...       _...._
-    ...     .'  _ _ `.
-    ...    | ."` ^ `". _,
-    ...    \_;`"---"`|//
-    ...      |       ;/
-    ...      \_     _/
-    ...        `"""`
-    ...
+   >>>    -=[ teapot ]=-
+   ...
+   ...       _...._
+   ...     .'  _ _ `.
+   ...    | ."` ^ `". _,
+   ...    \_;`"---"`|//
+   ...      |       ;/
+   ...      \_     _/
+   ...        `"""`
+   ...
 
 .. _aiohttp: https://aiohttp.readthedocs.io/en/stable/

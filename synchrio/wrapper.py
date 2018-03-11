@@ -50,7 +50,7 @@ class AsyncWrapper(object):
         return value
 
     def __getattr__(self, item):
-        if item in AsyncWrapper.__mine__:
+        if item in AsyncWrapper.__mine__:  # don't test wrapped object for items that this class owns/needs
             return object.__getattribute__(self, item)
 
         obj = getattr(self.__obj__, item)
@@ -85,7 +85,7 @@ class AsyncWrapper(object):
     def __dir__(self):
         return dir(self.__obj__)
 
-    def __enter__(self):
+    def __enter__(self):  # context managers !!!
         if hasattr(self.__obj__, "__aenter__"):
             return AsyncWrapper(self._run_as_blocking(self.__obj__.__aenter__()), _loop=self.__loop__)
 
